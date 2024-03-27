@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:textColor="@color/colorBlack"
+    tools:context=".MainActivity">
+
+
+
+    <Button android:id="@+id/btn_camera"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="clickCameraCrop"
+        android:textColor="#111111"
+        android:textSize="16dp"
+        android:fontFamily="sans-serif-black"
+        android:background="@drawable/button_drawable"
+        android:text="相 机"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_gallery"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button android:id="@+id/btn_gallery"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:onClick="clickGalleryCrop"
+        android:textColor="#111111"
+        android:fontFamily="sans-serif-black"
+        android:textSize="16dp"
+        android:background="@drawable/button_drawable"
+        android:text="相 册"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_camera"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/image_show"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gallery"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHorizontal_bias="0.5"
+        tools:src="@tools:sample/avatars"  />
+
+
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text=" FPS：      "
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:textColor="#333333"
+        android:background="#dddddd"
+        app:layout_constraintTop_toBottomOf="@id/image_show"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        />
+
+
+    <Button
+        android:id="@+id/btn_predict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#111111"
+        android:fontFamily="sans-serif-black"
+        android:textSize="16dp"
+        android:background="@drawable/button_drawable2"
+        android:text="运 行"
+        android:layout_marginTop="25dp"
+        android:onClick="clickRunModel"
+        app:layout_constraintTop_toBottomOf="@id/text_result"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#111111"
+        android:fontFamily="sans-serif-black"
+        android:textSize="16dp"
+        android:background="@drawable/button_drawable2"
+        android:onClick="clickSaveBitmap"
+        android:text="保 存"
+        android:layout_marginTop="25dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/btn_predict"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

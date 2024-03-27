@@ -1,0 +1,170 @@
+7767517
+168 202
+Input                    in0                      0 1 in0
+Convolution              conv_55                  1 1 in0 1 0=32 1=3 11=3 12=1 13=2 14=1 2=1 3=2 4=1 5=1 6=864
+Swish                    silu_0                   1 1 1 2
+Convolution              conv_56                  1 1 2 3 0=64 1=3 11=3 12=1 13=2 14=1 2=1 3=2 4=1 5=1 6=18432
+Swish                    silu_1                   1 1 3 4
+Split                    splitncnn_0              1 2 4 5 6
+Convolution              conv_58                  1 1 5 7 0=32 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=2048
+Swish                    silu_2                   1 1 7 8
+Split                    splitncnn_1              1 2 8 9 10
+Convolution              conv_59                  1 1 10 11 0=32 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=9216
+Swish                    silu_3                   1 1 11 12
+Split                    splitncnn_2              1 2 12 13 14
+Convolution              conv_57                  1 1 6 15 0=32 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=2048
+Swish                    silu_5                   1 1 15 16
+Convolution              conv_60                  1 1 14 17 0=32 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=9216
+Swish                    silu_4                   1 1 17 18
+Concat                   cat_0                    4 1 18 13 9 16 19 0=0
+Convolution              conv_61                  1 1 19 20 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=8192
+Swish                    silu_6                   1 1 20 21
+Pooling                  maxpool2d_113            1 1 21 22 0=0 1=2 11=2 12=2 13=0 2=2 3=0 5=1
+Split                    splitncnn_3              1 2 22 23 24
+Convolution              conv_63                  1 1 23 25 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=4096
+Swish                    silu_7                   1 1 25 26
+Split                    splitncnn_4              1 2 26 27 28
+Convolution              conv_64                  1 1 28 29 0=64 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=36864
+Swish                    silu_8                   1 1 29 30
+Split                    splitncnn_5              1 2 30 31 32
+Convolution              conv_62                  1 1 24 33 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=4096
+Swish                    silu_10                  1 1 33 34
+Convolution              conv_65                  1 1 32 35 0=64 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=36864
+Swish                    silu_9                   1 1 35 36
+Concat                   cat_1                    4 1 36 31 27 34 37 0=0
+Convolution              conv_66                  1 1 37 38 0=128 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=32768
+Swish                    silu_11                  1 1 38 39
+Split                    splitncnn_6              1 2 39 40 41
+Pooling                  maxpool2d_114            1 1 41 42 0=0 1=2 11=2 12=2 13=0 2=2 3=0 5=1
+Split                    splitncnn_7              1 2 42 43 44
+Convolution              conv_68                  1 1 43 45 0=128 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=16384
+Swish                    silu_12                  1 1 45 46
+Split                    splitncnn_8              1 2 46 47 48
+Convolution              conv_69                  1 1 48 49 0=128 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=147456
+Swish                    silu_13                  1 1 49 50
+Split                    splitncnn_9              1 2 50 51 52
+Convolution              conv_67                  1 1 44 53 0=128 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=16384
+Swish                    silu_15                  1 1 53 54
+Convolution              conv_70                  1 1 52 55 0=128 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=147456
+Swish                    silu_14                  1 1 55 56
+Concat                   cat_2                    4 1 56 51 47 54 57 0=0
+Convolution              conv_71                  1 1 57 58 0=256 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=131072
+Swish                    silu_16                  1 1 58 59
+Split                    splitncnn_10             1 2 59 60 61
+Pooling                  maxpool2d_115            1 1 61 62 0=0 1=2 11=2 12=2 13=0 2=2 3=0 5=1
+Split                    splitncnn_11             1 2 62 63 64
+Convolution              conv_73                  1 1 63 65 0=256 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=65536
+Swish                    silu_17                  1 1 65 66
+Split                    splitncnn_12             1 2 66 67 68
+Convolution              conv_74                  1 1 68 69 0=256 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=589824
+Swish                    silu_18                  1 1 69 70
+Split                    splitncnn_13             1 2 70 71 72
+Convolution              conv_72                  1 1 64 73 0=256 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=65536
+Swish                    silu_20                  1 1 73 74
+Convolution              conv_75                  1 1 72 75 0=256 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=589824
+Swish                    silu_19                  1 1 75 76
+Concat                   cat_3                    4 1 76 71 67 74 77 0=0
+Convolution              conv_76                  1 1 77 78 0=512 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=524288
+Swish                    silu_21                  1 1 78 79
+Split                    splitncnn_14             1 2 79 80 81
+Convolution              conv_78                  1 1 80 82 0=256 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=131072
+Swish                    silu_22                  1 1 82 83
+Split                    splitncnn_15             1 4 83 84 85 86 87
+Pooling                  maxpool2d_118            1 1 85 88 0=0 1=13 11=13 12=1 13=6 2=1 3=6 5=1
+Pooling                  maxpool2d_117            1 1 86 89 0=0 1=9 11=9 12=1 13=4 2=1 3=4 5=1
+Pooling                  maxpool2d_116            1 1 87 90 0=0 1=5 11=5 12=1 13=2 2=1 3=2 5=1
+Concat                   cat_4                    4 1 88 89 90 84 91 0=0
+Convolution              conv_77                  1 1 81 92 0=256 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=131072
+Swish                    silu_24                  1 1 92 93
+Convolution              conv_79                  1 1 91 94 0=256 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=262144
+Swish                    silu_23                  1 1 94 95
+Concat                   cat_5                    2 1 95 93 96 0=0
+Convolution              conv_80                  1 1 96 97 0=256 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=131072
+Swish                    silu_25                  1 1 97 98
+Split                    splitncnn_16             1 2 98 99 100
+Convolution              conv_81                  1 1 100 101 0=128 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=32768
+Swish                    silu_26                  1 1 101 102
+Convolution              conv_82                  1 1 60 103 0=128 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=32768
+Swish                    silu_27                  1 1 103 104
+Interp                   upsample_119             1 1 102 105 0=1 1=2.000000e+00 2=2.000000e+00 6=0
+Concat                   cat_6                    2 1 104 105 106 0=0
+Split                    splitncnn_17             1 2 106 107 108
+Convolution              conv_84                  1 1 107 109 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=16384
+Swish                    silu_28                  1 1 109 110
+Split                    splitncnn_18             1 2 110 111 112
+Convolution              conv_85                  1 1 112 113 0=64 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=36864
+Swish                    silu_29                  1 1 113 114
+Split                    splitncnn_19             1 2 114 115 116
+Convolution              conv_83                  1 1 108 117 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=16384
+Swish                    silu_31                  1 1 117 118
+Convolution              conv_86                  1 1 116 119 0=64 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=36864
+Swish                    silu_30                  1 1 119 120
+Concat                   cat_7                    4 1 120 115 111 118 121 0=0
+Convolution              conv_87                  1 1 121 122 0=128 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=32768
+Swish                    silu_32                  1 1 122 123
+Split                    splitncnn_20             1 2 123 124 125
+Convolution              conv_88                  1 1 125 126 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=8192
+Swish                    silu_33                  1 1 126 127
+Convolution              conv_89                  1 1 40 128 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=8192
+Swish                    silu_34                  1 1 128 129
+Interp                   upsample_120             1 1 127 130 0=1 1=2.000000e+00 2=2.000000e+00 6=0
+Concat                   cat_8                    2 1 129 130 131 0=0
+Split                    splitncnn_21             1 2 131 132 133
+Convolution              conv_91                  1 1 132 134 0=32 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=4096
+Swish                    silu_35                  1 1 134 135
+Split                    splitncnn_22             1 2 135 136 137
+Convolution              conv_92                  1 1 137 138 0=32 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=9216
+Swish                    silu_36                  1 1 138 139
+Split                    splitncnn_23             1 2 139 140 141
+Convolution              conv_90                  1 1 133 142 0=32 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=4096
+Swish                    silu_38                  1 1 142 143
+Convolution              conv_93                  1 1 141 144 0=32 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=9216
+Swish                    silu_37                  1 1 144 145
+Concat                   cat_9                    4 1 145 140 136 143 146 0=0
+Convolution              conv_94                  1 1 146 147 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=8192
+Swish                    silu_39                  1 1 147 148
+Split                    splitncnn_24             1 2 148 149 150
+Convolution              conv_95                  1 1 150 151 0=128 1=3 11=3 12=1 13=2 14=1 2=1 3=2 4=1 5=1 6=73728
+Swish                    silu_40                  1 1 151 152
+Concat                   cat_10                   2 1 152 124 153 0=0
+Split                    splitncnn_25             1 2 153 154 155
+Convolution              conv_97                  1 1 154 156 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=16384
+Swish                    silu_41                  1 1 156 157
+Split                    splitncnn_26             1 2 157 158 159
+Convolution              conv_98                  1 1 159 160 0=64 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=36864
+Swish                    silu_42                  1 1 160 161
+Split                    splitncnn_27             1 2 161 162 163
+Convolution              conv_96                  1 1 155 164 0=64 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=16384
+Swish                    silu_44                  1 1 164 165
+Convolution              conv_99                  1 1 163 166 0=64 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=36864
+Swish                    silu_43                  1 1 166 167
+Concat                   cat_11                   4 1 167 162 158 165 168 0=0
+Convolution              conv_100                 1 1 168 169 0=128 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=32768
+Swish                    silu_45                  1 1 169 170
+Split                    splitncnn_28             1 2 170 171 172
+Convolution              conv_101                 1 1 172 173 0=256 1=3 11=3 12=1 13=2 14=1 2=1 3=2 4=1 5=1 6=294912
+Swish                    silu_46                  1 1 173 174
+Concat                   cat_12                   2 1 174 99 175 0=0
+Split                    splitncnn_29             1 2 175 176 177
+Convolution              conv_103                 1 1 176 178 0=128 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=65536
+Swish                    silu_47                  1 1 178 179
+Split                    splitncnn_30             1 2 179 180 181
+Convolution              conv_104                 1 1 181 182 0=128 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=147456
+Swish                    silu_48                  1 1 182 183
+Split                    splitncnn_31             1 2 183 184 185
+Convolution              conv_102                 1 1 177 186 0=128 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=65536
+Swish                    silu_50                  1 1 186 187
+Convolution              conv_105                 1 1 185 188 0=128 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=147456
+Swish                    silu_49                  1 1 188 189
+Concat                   cat_13                   4 1 189 184 180 187 190 0=0
+Convolution              conv_106                 1 1 190 191 0=256 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=131072
+Swish                    silu_51                  1 1 191 192
+Convolution              conv_107                 1 1 149 193 0=128 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=73728
+Swish                    silu_52                  1 1 193 194
+Convolution              conv_110                 1 1 194 out0 0=87 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=11136
+Convolution              conv_108                 1 1 171 196 0=256 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=294912
+Swish                    silu_53                  1 1 196 197
+Convolution              conv_111                 1 1 197 out1 0=87 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=22272
+Convolution              conv_109                 1 1 192 199 0=512 1=3 11=3 12=1 13=1 14=1 2=1 3=1 4=1 5=1 6=1179648
+Swish                    silu_54                  1 1 199 200
+Convolution              conv_112                 1 1 200 out2 0=87 1=1 11=1 12=1 13=1 14=0 2=1 3=1 4=0 5=1 6=44544
